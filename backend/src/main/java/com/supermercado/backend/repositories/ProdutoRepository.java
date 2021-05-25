@@ -6,7 +6,6 @@ import com.supermercado.backend.entities.Produto;
 
 public interface ProdutoRepository extends JpaRepository<Produto, Integer> {
 	
-	
-	
 
+	
 }
