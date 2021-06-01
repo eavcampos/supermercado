@@ -19,6 +19,7 @@ public class ClienteService {
 	
 		
 	@Transactional(readOnly = true)
+	
 	public List<ClienteDTO> findAll() {
 		List<Cliente> lista = repository.findAll();
 		List<ClienteDTO> listaDTO = new ArrayList<ClienteDTO>();

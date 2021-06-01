@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produto</title>
+
+    <style>
+        td, tr, table {
+            border: 1px solid red;
+        }
+
+    </style>
+</head>
+
+<body>
+   
+    <table id="tabela_produtos"> 
+
+    </table>
+<br><br>
+<form id="form_produto" onsubmit="cadastrarProduto()">
+
+<label for="descricao">Descrição: </label>
+<input name="descricao" id="descricao" type="text">
+
+<label for="qtdEstoque">Quantidade em estoque: </label>
+<input name="qdtEstoque" id="qtdEstoque" type="number">
+
+<label for="precoVenda">Preço de venda:</label>
+<input name="precoVenda" id="precoVenda" type="text">
+<br>
+<br>
+<button type="submit">Cadastrar</button>
+
+</form>
+
+
+
+    <script src="./js/scripts_produtos.js"></script>
+</body>
+
+</html>

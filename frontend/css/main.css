@@ -1,0 +1,173 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto; 
+}
+
+.menu-principal {
+    width: 100%;
+    background-color: #252323;
+    height: 90px;
+}
+
+.header-1 {
+    margin: 0;
+    display: inline-flex;
+    position: relative;
+    height: 90px;
+    width: 75%;
+}
+
+.header-2 {
+    margin: 0;
+    display: inline;
+    float: right;
+}
+
+.empilha {
+    display:inline-block;
+    vertical-align: middle;
+}
+
+
+ .menu-urls {
+    border-bottom: 3px solid #efefef;
+    height: 50px; /*era 60% */
+    width: 100%;
+    float: left;
+    position: relative;
+    margin-top: 8px; /*nao tinha*/
+ }
+
+.logo {
+    float: left;
+    padding: 16px 0px 0px 0px;
+    width: 5%;
+    margin-left: 40px;
+}
+
+.nome-fantasia {
+    width: 40%;
+    display: inline-block;
+    align-items: center; 
+}
+
+.nome-fantasia h1 {
+    display: inline-block;
+    color: #ffeeee;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 40px;
+    padding-left: 15px;
+}
+
+.redes-sociais {
+    float: right;
+    margin-right: 40px;
+    height: 60px;
+}
+
+.redes-sociais ul li {
+    margin-left: 10px;
+    display: inline-block;
+    list-style: none;
+}
+
+.logar a {
+    color: #ffeeee;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: red;
+    float: right;
+    margin-right: 40px;
+}
+
+.menu-navegacao {
+    background-color: white;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.menu-navegacao ul {
+    padding-inline-start:0%;
+    width: 70%;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.menu-navegacao ul li {
+    display: inline-block;
+    list-style: none;
+    height: 40px;
+
+}
+
+.menu-navegacao ul li:hover {
+    border-bottom: 2px solid #00bac6;
+
+}
+
+.menu-navegacao ul li a {
+    color: red;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-decoration: red;
+    display: inline-block;
+    list-style: none;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.menu-navegacao ul li a:hover {
+    color: #00bac6;
+
+}
+.imagem-centro-tela {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imagem-centro-tela img {
+    width: 100%;
+}
+.mostra-imagens {
+    width: 100%;
+    display: inline-block;
+}
+.botao-submit input { 
+    background-color: yellow;
+    border-style: double;
+    text-decoration: wavy;
+}
+
+.botao-retroceder-imagem {
+    position: absolute;
+    left: 120px;
+    bottom: 50px;
+}
+
+.botao-avancar-imagem {
+    position: absolute;
+    right: 120px;
+    bottom: 50px;
+}
+
+
+.volta-img {
+    background-image: url("../img/retroceder_64x64.png");
+    border: none;
+    background-color: rgba(255,255,255,0);
+    height: 64px;  
+    width: 64px;;
+}
+
+.avanca-img {
+    background-image: url("../img/avancar_64x64.png");
+    border: none;
+    background-color: rgba(255,255,255,0);
+    height: 64px;  
+    width: 64px;;
+}
+
