@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import com.supermercado.backend.entities.Cliente;
 
-public class ClienteDTO implements Serializable {
+public class ClienteDto implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -12,18 +12,18 @@ public class ClienteDTO implements Serializable {
 	private String nome;
 	private String endereco;
 	
-	public ClienteDTO() {
+	public ClienteDto() {
 		super();
 	}
 
-	public ClienteDTO(Integer id, String nome, String endereco) {
+	public ClienteDto(Integer id, String nome, String endereco) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.endereco = endereco;
 	}
 	
-	public ClienteDTO(Cliente entity) {
+	public ClienteDto(Cliente entity) {
 		super();
 		this.id = entity.getId();
 		this.nome = entity.getNome();

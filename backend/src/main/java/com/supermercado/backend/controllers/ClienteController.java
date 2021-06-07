@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.supermercado.backend.dto.ClienteDTO;
-import com.supermercado.backend.dto.ProdutoDTO;
+import com.supermercado.backend.dto.ClienteDto;
 import com.supermercado.backend.services.ClienteService;
 
 @RestController
@@ -20,8 +19,8 @@ public class ClienteController {
 	private ClienteService service;
 	
 	@GetMapping
-	public ResponseEntity<List<ClienteDTO>> findAll() {
-		List <ClienteDTO> listaFinal = service.findAll();
+	public ResponseEntity<List<ClienteDto>> findAll() {
+		List <ClienteDto> listaFinal = service.findAll();
 		return ResponseEntity.ok().body(listaFinal);
 	}
 

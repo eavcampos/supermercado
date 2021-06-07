@@ -2,9 +2,10 @@ package com.supermercado.backend.dto;
 
 import java.io.Serializable;
 
+import com.supermercado.backend.entities.Fornecedor;
 import com.supermercado.backend.entities.Produto;
 
-public class ProdutoDTO implements Serializable {
+public class ProdutoDto implements Serializable {
 
 	
 	private static final long serialVersionUID = 1L;
@@ -13,25 +14,34 @@ public class ProdutoDTO implements Serializable {
 	private String descricao;
 	private Double precoVenda;
 	private Integer qtdEstoque;
+	private String linkImagem;
+	private Fornecedor fornecedor;
+
 	
-	public ProdutoDTO() {
+	public ProdutoDto() {
 		super();
 	}
 
-	public ProdutoDTO(Integer id, String descricao, Double precoVenda, Integer qtdEstoque) {
+	public ProdutoDto(Integer id, String descricao, Double precoVenda, Integer qtdEstoque, String linkImagem,
+			Fornecedor fornecedor) {
 		super();
 		this.id = id;
 		this.descricao = descricao;
 		this.precoVenda = precoVenda;
 		this.qtdEstoque = qtdEstoque;
+		this.linkImagem = linkImagem;
+		this.fornecedor = fornecedor;
 	}
-	
-	public ProdutoDTO(Produto entity) {
+
+
+	public ProdutoDto(Produto entity) {
 		super();
 		this.id = entity.getId();
 		this.descricao = entity.getDescricao();
 		this.precoVenda = entity.getPrecoVenda();
 		this.qtdEstoque = entity.getQtdEstoque();
+		this.linkImagem = entity.getLinkImagem();
+		this.fornecedor = entity.getFornecedor();
 	}
 
 	public Integer getId() {
@@ -65,6 +75,22 @@ public class ProdutoDTO implements Serializable {
 	public void setQtdEstoque(Integer qtdEstoque) {
 		this.qtdEstoque = qtdEstoque;
 	}
+
+	public String getLinkImagem() {
+		return linkImagem;
+	}
+
+	public void setLinkImagem(String linkImagem) {
+		this.linkImagem = linkImagem;
+	}
+
+	public Fornecedor getFornecedor() {
+		return fornecedor;
+	}
+
+	public void setFornecedor(Fornecedor fornecedor) {
+		this.fornecedor = fornecedor;
+	}	
 	
 	
 }

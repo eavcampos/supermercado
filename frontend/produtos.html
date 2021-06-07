@@ -8,8 +8,9 @@
     <title>Cadastro de Produto</title>
 
     <style>
-        td, tr, table {
+       td, tr, table {
             border: 1px solid red;
+            align-items: center;
         }
 
     </style>
@@ -17,28 +18,105 @@
 
 <body>
    
-    <table id="tabela_produtos"> 
+    <table id="tipos_consulta_produto"> 
+        <tr>
+             <td>
+                <button type="submit" onclick="ordenarPorDescricao()">Ordenar por Descrição</button>
+             </td>
+             <td>
+                <button type="submit" onclick="ordenarPorPreco()">Ordenar por Preço</button> 
+            </td>     
+         </tr>
+     </table>
+ 
 
+    <table id="tabela_produtos"> 
+       <tr>
+            <th>Id</th>
+            <th>Descrição</th>
+            <th>Qtd. em estoque</th>
+            <th>Preço de venda</th>
+            <th>Ações</th>
+        </tr>
     </table>
 <br><br>
-<form id="form_produto" onsubmit="cadastrarProduto()">
+<div>
+ 
 
-<label for="descricao">Descrição: </label>
-<input name="descricao" id="descricao" type="text">
+<form id="form_produto" method="post" enctype="multipart/form-data" onsubmit="cadastrarProduto()">
+    <fieldset>
+        <h2>Formulario para cadastro de novos produtos</h2>
+        <div>
+            <label for="descricao">Descrição: </label>
+            <input name="descricao" id="descricao" type="text">
+        </div>
+        <div>
+        <label for="fornecedor">Fornecedor: </label>
+        <select name="fornecedor" id="fornecedor">
+ 
+        </select>
+    </div>
+        <div>
+            <label for="qtdEstoque">Quantidade em estoque: </label>
+            <input name="qdtEstoque" id="qtdEstoque" type="number">
+        </div>
 
-<label for="qtdEstoque">Quantidade em estoque: </label>
-<input name="qdtEstoque" id="qtdEstoque" type="number">
+        <div>
+            <label for="precoVenda">Preço de venda:</label>
+            <input name="precoVenda" id="precoVenda" type="text">
+        </div>
 
-<label for="precoVenda">Preço de venda:</label>
-<input name="precoVenda" id="precoVenda" type="text">
-<br>
-<br>
-<button type="submit">Cadastrar</button>
-
+        <div>
+            <label for="imagem">Imagem do produto:</label>
+            <input name="imagem" id="imagem" type="file">
+        </div>
+    <br>
+    <br>
+        <div>
+            <button type="submit">Cadastrar</button>
+        </div>
+    </fieldset>
 </form>
+<br>
 
 
-
+<form id="form_alt_produto" method="post" enctype="multipart/form-data" onsubmit="alterarProduto()">
+    <fieldset>
+        <h2>Formulario para alteraçao</h2>
+        <div>
+            <label for="id">id: </label>
+            <input name="id2" id="id2" type="text">
+            </div>        
+        <div>
+            <label for="descricao">Descrição: </label>
+            <input name="descricao" id="descricao2" type="text">
+        </div>
+        <div>
+            <label for="fornecedor2">Fornecedor: </label>
+            <select name="fornecedor2" id="fornecedor2">
+ 
+            </select>
+        </div>
+        <div>
+            <label for="qtdEstoque">Quantidade em estoque: </label>
+            <input name="qdtEstoque" id="qtdEstoque2" type="number">
+        </div>
+        <div>
+            <label for="precoVenda">Preço de venda:</label>
+            <input name="precoVenda" id="precoVenda2" type="text">
+        </div>
+        <div>
+            <label for="imagem">Imagem do produto:</label>
+            <input name="imagem" id="imagem2" type="file">
+        </div>
+    <br>
+    <br>
+        <div>
+            <button type="submit">Alterar</button>
+        </div>
+    </fieldset>
+</form>
+</div>
     <script src="./js/scripts_produtos.js"></script>
 </body>
 

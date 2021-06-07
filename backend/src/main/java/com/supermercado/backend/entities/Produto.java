@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -16,17 +18,25 @@ public class Produto {
 	private String descricao;
 	private Double precoVenda;
 	private Integer qtdEstoque;
+	private String linkImagem;
+	
+	@ManyToOne
+	@JoinColumn(name = "id_fornecedor",  referencedColumnName = "id")
+	private Fornecedor fornecedor;
 	
 	public Produto() {
 		super();
 	}
-
-	public Produto(Integer id, String descricao, Double precoVenda, Integer qtdEstoque) {
+	
+	public Produto(Integer id, String descricao, Double precoVenda, Integer qtdEstoque, String linkImagem,
+			Fornecedor fornecedor) {
 		super();
 		this.id = id;
 		this.descricao = descricao;
 		this.precoVenda = precoVenda;
 		this.qtdEstoque = qtdEstoque;
+		this.linkImagem = linkImagem;
+		this.fornecedor = fornecedor;
 	}
 
 	public Integer getId() {
@@ -60,6 +70,22 @@ public class Produto {
 	public void setQtdEstoque(Integer qtdEstoque) {
 		this.qtdEstoque = qtdEstoque;
 	}
+	
+	public String getLinkImagem() {
+		return linkImagem;
+	}
+
+	public void setLinkImagem(String linkImagem) {
+		this.linkImagem = linkImagem;
+	}
+
+	public Fornecedor getFornecedor() {
+		return fornecedor;
+	}
+
+	public void setFornecedor(Fornecedor fornecedor) {
+		this.fornecedor = fornecedor;
+	}
 
 	@Override
 	public int hashCode() {
@@ -85,6 +111,4 @@ public class Produto {
 			return false;
 		return true;
 	}
-	
-
 }
